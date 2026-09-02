@@ -1,0 +1,51 @@
+<html>
+    <body>
+<input type="text" id="pan" placeholder="Enter PAN card number">
+        <div id="valid">
+    <h6 id="len_pass" style="color: red;">length must be 10 characters</h6>
+    <h6 id="upper_pass" style="color: red;">one upper case</h6>
+    <h6 id="lower_pass" style="color: red;">one lower case</h6>
+    <h6 id="num_pass" style="color: red;">one number</h6>
+        </div>
+    <script>
+        const panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+
+        document.getElementById("pan")
+            .addEventListener("keyup", ()=>{
+            let input = document.getElementById("pan").value;
+            let pan_len = input.length;
+
+            if(pan_len > 0){
+                document.getElementById("valid").style.display = "block";
+            }else{
+                document.getElementById("valid").style.display = "none";
+            }
+
+            if(pan_len === 10){
+                document.getElementById("len_pass").style.color = "green";
+            }else{
+                document.getElementById("len_pass").style.color = "red";
+            }
+
+            if(panPattern.test(p.toUpperCase())){
+                document.getElementById("upper_pass").style.color = "green";
+            }else{
+                document.getElementById("upper_pass").style.color = "red";
+            }
+
+            if(/[a-z]/.test(pan)){
+                document.getElementById("lower_pass").style.color = "green";
+            }else{
+                document.getElementById("lower_pass").style.color = "red";
+            }
+
+            if(/[0-9]/.test(pan)){
+                document.getElementById("num_pass").style.color = "green";
+            }else{
+                document.getElementById("num_pass").style.color = "red";
+            }
+        });
+    </script>
+    
+</body>
+</html>

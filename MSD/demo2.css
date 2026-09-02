@@ -1,0 +1,21 @@
+.box{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.rectangle{
+    height:200px;
+    width: 400px;
+    background-color:red;
+}
+.square{
+    height:200px;
+    width: 200px;
+    background-color:blue;
+}
+.circle{
+    height:200px;
+    width: 600px;
+    background-color:green;
+    border-radius:50%;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="name" type="text" placeholder="Enter name">
+    </br>
+    </br>
+    <button id="upper">click</button>
+    </br>
+    <p id="res">o/p here </p>
+    <script>
+        document.getElementById("upper")
+           .addEventListener("click", ()=>{
+            let name = document.getElementById("name").value;
+            document.getElementById("res").innerHTML = name.toUpperCase();
+        });
+
+        document.getElementById("upper").addEventListener("mouseover", ()=>{
+
+            document.getElementById("upper").style.color= "red";
+        });
+
+        document.getElementById("upper").addEventListener("mouseout", ()=>{
+            document.getElementById("upper").style.color = "blue";
+        });
+
+    </script>
+</body>
+</html>
